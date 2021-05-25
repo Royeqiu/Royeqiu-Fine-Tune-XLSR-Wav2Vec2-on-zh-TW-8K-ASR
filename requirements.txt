@@ -1,0 +1,11 @@
+opencc_python_reimplemented==0.1.4
+torch==1.2.0
+numpy==1.19.4
+pandas==0.24.2
+transformers==3.5.1
+librosa==0.8.0
+torchaudio==0.8.1
+datasets==1.6.2
+dataclasses==0.8
+opencc==1.1.2
+scikit_learn==0.24.2
