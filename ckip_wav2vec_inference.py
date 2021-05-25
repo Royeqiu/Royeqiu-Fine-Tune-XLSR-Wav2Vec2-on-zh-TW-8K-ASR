@@ -55,5 +55,5 @@ predicted_text = []
 for index,file in enumerate(files):
     if index % 100 ==0:
         print(len(files),index)
-    predicted_text.append(predict(load_file_to_data(os.path.join(path,file))))
+    predicted_text.append(predict(load_file_to_data(os.path.join(path,file)))[0])
 pd.DataFrame({'file':files,'inference':predicted_text}).to_csv('./data/w2v_inference.csv',index=False)
