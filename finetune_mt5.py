@@ -1,7 +1,5 @@
 import logging
 import pandas as pd
-import gc
-import torch
 from simpletransformers.t5 import T5Model, T5Args
 from sklearn.model_selection import train_test_split
 inference_label_path = './data/inference_label/inference_label.csv'
@@ -39,8 +37,5 @@ class mt5_trainer():
         self.model.train_model(train_df, eval_data=test_df)
 
 mt5_trainer = mt5_trainer()
-
-gc.collect()
-torch.cuda.empty_cache()
 mt5_trainer.train(train_df,test_df)
 

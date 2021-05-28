@@ -36,8 +36,8 @@ def evaluate(batch):
     pred_ids = torch.argmax(logits, dim=-1)
     batch["pred_strings"] = processor.batch_decode(pred_ids)
     return batch
-print(test_dataset["labels"])
-print(processor.batch_decode(test_dataset["labels"]))
-#result = test_dataset.map(evaluate, batched=True, batch_size=8)
-
-#print("WER: {:2f}".format(100 * wer.compute(predictions=result["pred_strings"], references=processor.decode(result["labels"]))))
+#print(test_dataset["labels"])
+#print(processor.batch_decode(test_dataset["labels"]))
+result = test_dataset.map(evaluate, batched=True, batch_size=8)
+print(result["pred_strings"][0],processor.decode(result["labels"][0]))
+print("WER: {:2f}".format(100 * wer.compute(predictions=result["pred_strings"], references=processor.batch_decode(result["labels"]))))
