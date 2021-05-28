@@ -48,7 +48,7 @@ def predict(data):
         decoded_results.append(processor.decode(comb_pred_ids))
 
     return decoded_results
-path = 'data/converted_data'
+path = 'data/converted_wav_data'
 files = os.listdir(path)
 predicted_text = []
 

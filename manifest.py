@@ -16,7 +16,7 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 transcript_path = 'data/transcript'
-wav_path = 'data/converted_data'
+wav_path = 'data/converted_wav_data'
 transcript_id = 'transcript_id'
 PATH = 'path'
 AUDIO_FILEPATH = 'audio_filepath'
